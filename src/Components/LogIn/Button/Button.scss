@@ -1,0 +1,17 @@
+$primay-btn-color : rgb(101, 101, 245);
+$border-none: none;
+
+
+
+$btn-bg: transparent;
+.div {
+    
+    display: inline-block;
+    
+    .button{
+        color: $primay-btn-color;
+        border: $border-none;
+        background: $btn-bg;
+    
+    }
+}

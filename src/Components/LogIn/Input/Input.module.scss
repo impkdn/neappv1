@@ -1,0 +1,21 @@
+.inputWrapper{
+    // display: inline-block;
+    border: 0px;
+    margin: 0px;
+    div{
+        display: inline-block;
+        margin-left: 20px;
+
+        input{
+            outline: none;
+            // border: none;
+        }
+    }
+    label{
+        font-weight: bolder;
+    }
+
+}
+.erromsg{
+    display: inline-block;
+}

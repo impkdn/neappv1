@@ -1,10 +1,13 @@
-
+import classes from  "./Button.scss"
 
 
 const Button = props => {
 
     return (
-        <button type={props.type} onClick = {props.onClick} >{props.text}</button>
+        <div className={classes.div} >
+            <button type={props.type} onClick = {props.onClick} >{props.text}</button>
+
+        </div>
     )
 }
 
