@@ -1,14 +1,14 @@
-import classes from  "./Button.scss"
+// import classes from  "./Button.scss"
 
 
-const Button = props => {
+// const Button = props => {
 
-    return (
-        <div className={classes.div} >
-            <button type={props.type} onClick = {props.onClick} >{props.text}</button>
+//     return (
+//         <div className={classes.div} >
+//             <button type={props.type} onClick = {props.onClick} >{props.text}</button>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default Button;
+// export default Button;
