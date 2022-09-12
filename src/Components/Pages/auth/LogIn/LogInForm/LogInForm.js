@@ -2,12 +2,13 @@ import React from "react";
 import { useState } from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input"
+import { useNavigate } from "react-router-dom"
 import { Navigate } from "react-router-dom";
 // import Dashboard from "../Dashboard";
-
 const LogInForm = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
 //   const [authenticated, setAuthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated") || false));
 //   const users = [{ email: "pijush@gmail.com", password: "ASD2@dsdfafsd" }];
   const onEmailChangeHandeler = (event) => {
@@ -50,6 +51,8 @@ const LogInForm = (props) => {
     // }
     if (isValid) {
       alert("Form data is valid");
+      navigate(`/dashboard`)
+
 
       // <Navigate replace to="../../Components/LogIn/Dashboard" />
   

@@ -1,0 +1,66 @@
+.dashboardHeader {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .dashboardLeftArea {
+        display: flex;
+        width: 302px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .dashboardLeftArea {
+        width: calc(100% - 302px);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+
+        .dashboardHeaderText {
+            width: 500px;
+        }
+
+        .dashboardMenu {
+            width: calc(100% - 500px);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: flex-end;
+
+            .menu {
+                .dropDownContent {
+                    display: none;
+                    position: absolute;
+                    background-color: #f1f1f1;
+                    min-width: 160px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    right: 70px;
+                    text-align: center;
+
+                    a {
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                    a:hover{
+                        background-color: #ddd;
+                    }
+                }
+            }
+        }
+    }
+}

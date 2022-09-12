@@ -1,0 +1,54 @@
+.itemTable{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+.rowHeader {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+    th{
+        font-family: sans-serif;
+        width: 13%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+        color: brown;
+        font-size: 25px;
+    }
+}
+
+.rowContent{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+    td{
+        font-family: sans-serif;
+        width: 13%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        color: rgb(20, 5, 230);
+        font-size: 25px;
+        word-break: break-word;
+    
+    
+    }
+}
+.DashboardWrapper{
+    margin: 10px;
+}
