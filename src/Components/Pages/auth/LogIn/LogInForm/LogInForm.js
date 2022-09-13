@@ -56,10 +56,12 @@ const LogInForm = (props) => {
 
       // <Navigate replace to="../../Components/LogIn/Dashboard" />
       props.onLogin(isValid);
-      <Redirect to='../Dashboard'></Redirect>
-  
+      // <Redirect to='../Dashboard'></Redirect>
+      // navigate("/dashboard", { replace: true });
+      
     } 
     // console.log(localStorage.getItem("authenticated"));
+    props.onLogin(isValid);
     setEmail("");
     setPassword("");
   };

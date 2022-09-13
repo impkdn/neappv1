@@ -1,4 +1,4 @@
-import { style } from "@mui/system";
+// import { style } from "@mui/system";
 import React from "react";
 import classes from "./Dashboard.module.scss"
 import { useState } from "react";
@@ -15,7 +15,7 @@ const DashboardHeader = () => {
 
     return (
         <header className={classes.dashboardHeader}>
-        <div className={classes.ashboardTextBtn}>
+        <div className={classes.dashboardTextBtn}>
           <h2>DASHBOARD</h2>
           <span className={classes.dashboardBtn}>
             <button>

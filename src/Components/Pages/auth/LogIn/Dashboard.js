@@ -5,6 +5,7 @@ import TableHeader from "../../../TableHeader";
 import TableContent from "../../../TableContent";
 import classes from "../../../../Components/Table.module.scss"
 import DashboardHeader from "./DashboardElement/DashboardHeader";
+import Button from "./Button/Button";
 
 const Dashboard = () => {
 
@@ -35,6 +36,7 @@ const Dashboard = () => {
     <div className={classes.DashboardWrapper}>
       <DashboardHeader/>
       <p>Welcome to your Dashboard </p>
+      <Button text = "Logout" />
       {/* <Tables /> */}
       <TableHeader/>
       {

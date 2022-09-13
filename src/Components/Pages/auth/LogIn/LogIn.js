@@ -8,19 +8,24 @@ import { useState } from "react";
 
 const LogIn = props => {
 
-    const {isValid, setIsValid} = useState(false);
-
+    const {isValid, setIsValid} = useState(true);
+    // const isValid = false
     const logInHandaler = (value) => {
-        setIsValid = value 
+        setIsValid (value) 
         console.log("hi value of isValid=" + isValid)
     }
+    const logOutHandaler = () => {
+        setIsValid (false) 
+        console.log("hi value of isValid=" + isValid)
+    }
+
     
-    if (!isValid) {
+    if (isValid) {
         return (
             <div>
                 Data is valid
 
-                <Dashboard ></Dashboard>
+                <Dashboard onLogin = {logInHandaler} onLogOut = {logOutHandaler}></Dashboard>
             </div>
         );
     } else {
@@ -35,7 +40,7 @@ const LogIn = props => {
                 style={{height:"100px", width:"100px"}}/>
     
                 
-                <LogInForm onLogin = {logInHandaler}></LogInForm>
+                <LogInForm ></LogInForm>
             </div>
         );
     

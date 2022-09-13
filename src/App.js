@@ -18,9 +18,11 @@ function App() {
           <Route path="/" exact element={<Layout/>}>
             <Route index element={<Home/>}/>
             <Route path='contact' element={<Contact/>}/>
-            <Route path='login' element={<LogIn/>}/>
+            <Route path='login' element={<LogIn/>}>
+            </Route>
+              <Route path='dashboard' element={<Dashboard/>}/>
+
           </Route>
-            <Route path='dashboard' element={<Dashboard/>}/>
          
         {/* <Route path="/dashboard"  element={<Dashboard/>}>
           </Route> */}
