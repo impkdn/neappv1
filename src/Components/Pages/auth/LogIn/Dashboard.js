@@ -24,11 +24,13 @@
 // export default Dashboard;
 
 // import { useEffect, useState } from "react";
+import Button from "./Button/Button"
 const Dashboard = () => {
   
     return (
       <div>
         <p>Welcome to your Dashboard</p>
+        <Button type = "button" text = "Log Out"/>
       </div>
     );
   };

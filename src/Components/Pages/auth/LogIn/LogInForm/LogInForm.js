@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Button from "../Button/Button";
 import Input from "../Input/Input"
-import { Navigate } from "react-router-dom";
+import { Redirect } from 'react-router-dom';
 // import Dashboard from "../Dashboard";
 
 const LogInForm = (props) => {
@@ -52,6 +52,8 @@ const LogInForm = (props) => {
       alert("Form data is valid");
 
       // <Navigate replace to="../../Components/LogIn/Dashboard" />
+      props.onLogin(isValid);
+      <Redirect to='../Dashboard'></Redirect>
   
     } 
     // console.log(localStorage.getItem("authenticated"));
