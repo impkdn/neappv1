@@ -2,15 +2,19 @@
 import React from "react";
 import classes from "./Dashboard.module.scss"
 import { useState } from "react";
+import userImage from "../../../../../avatar/Avatar9.png"
+import menuIcon from "../../../../../avatar/2292434-200.png"
+import Dropdown from "./Dropdown/Dropdown";
 
 const DashboardHeader = () => {
-    const [display, setDisplay] = useState(false)
-    const displayHideShow = () => {
+    const [display, setDisplay] = useState(true)
+    const displayHideShow = (display) => {
+        display = display
         if (display) {
-            setDisplay(true);
+            setDisplay(false);
             
         }
-        setDisplay(false)
+        setDisplay(true)
     }
 
     return (
@@ -41,15 +45,15 @@ const DashboardHeader = () => {
           </div>
           <div className={classes.dashboardMenu}>
             <span className={classes.userImage}>
-              <img src="./assets/avatar/Avatar9.png" alt="user-image" />
+              <img src={userImage} alt="user-image" />
             </span>
             <div className={classes.menu}>
               <button onclick={displayHideShow}>
                 <span>
-                  <img src="./assets/avatar/2292434-200.png" alt="menu-icon" />
+                  <img src={menuIcon} alt="menu-icon" />
                 </span>
               </button>
-              <div className={!display? classes.dropDownContnent : "" } id="dropDown">
+              <div className={display ? classes.dropDownContnentHide : classes.dropDownContnentHide } id="dropDown">
                 <a href="./profile.html">Personal Info</a>
                 <a href="#">Settings</a>
                 <a href="#">Profile</a>
@@ -58,6 +62,7 @@ const DashboardHeader = () => {
             </div>
           </div>
         </div>
+        <Dropdown placeHolder="ME..."/>
       </header>
     );
 }
