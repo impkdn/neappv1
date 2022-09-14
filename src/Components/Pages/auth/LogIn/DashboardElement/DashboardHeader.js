@@ -4,19 +4,25 @@ import classes from "./Dashboard.module.scss"
 import { useState } from "react";
 import userImage from "../../../../../avatar/Avatar9.png"
 import menuIcon from "../../../../../avatar/2292434-200.png"
-import Dropdown from "./Dropdown/Dropdown";
+import Button from "../Button/Button";
+import PersonalInfo from "../../../PersonalInfo";
 
-const DashboardHeader = () => {
+import { NavLink } from "react-router-dom";
+
+
+const DashboardHeader = (props) => {
     const [display, setDisplay] = useState(true)
-    const displayHideShow = (display) => {
-        display = display
-        if (display) {
-            setDisplay(false);
-            
-        }
-        setDisplay(true)
+    
+    const displayShow = () => {
+      setDisplay(false)
+      // console.log(display);
+    }
+    const displayHide = () => {
+      setDisplay(true)
+      // console.log(display);
     }
 
+    
     return (
         <header className={classes.dashboardHeader}>
         <div className={classes.dashboardTextBtn}>
@@ -48,21 +54,22 @@ const DashboardHeader = () => {
               <img src={userImage} alt="user-image" />
             </span>
             <div className={classes.menu}>
-              <button onclick={displayHideShow}>
+              <button onClick={!display ? displayHide : displayShow}>
                 <span>
                   <img src={menuIcon} alt="menu-icon" />
                 </span>
               </button>
-              <div className={display ? classes.dropDownContnentHide : classes.dropDownContnentHide } id="dropDown">
-                <a href="./profile.html">Personal Info</a>
+              <div  className={`${classes.dropDownContentShow} ${!display  && classes.dropDownContentHide}`}>
+                <a href="./profile.html" >Personal Info</a>
+                <NavLink to = "/personalinfo"><Button text="Personal Info"></Button></NavLink>
                 <a href="#">Settings</a>
                 <a href="#">Profile</a>
-                <a href="./index.html" onclick="removeStorage()">Logout</a>
+                <a href="./index.html">Logout</a>
               </div>
             </div>
           </div>
         </div>
-        <Dropdown placeHolder="ME..."/>
+       
       </header>
     );
 }
