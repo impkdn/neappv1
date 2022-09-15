@@ -23,7 +23,7 @@ function App() {
             <Route path='login' element={<LogIn/>}>
           </Route>
           <Route path='/'cxact element={<DashboardLayout/>}>
-            <Route index element = {<Dashboard/>}/>
+            <Route path='dashboard' element = {<Dashboard/>}/>
             <Route path= 'personalinfo' element = {<PersonalInfo/>}/>
 
           </Route>

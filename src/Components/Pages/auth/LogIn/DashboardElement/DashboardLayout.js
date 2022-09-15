@@ -7,7 +7,7 @@ const DashboardLayout = () => {
 
     return (
         <>
-            <Dashboard/>
+            {/* <Dashboard/> */}
             <Outlet/>
         </>
     );
