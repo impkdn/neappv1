@@ -4,19 +4,33 @@ import LogInForm from "../LogIn/LogInForm/LogInForm"
 
 import Dashboard from "./Dashboard";
 import { useState } from "react";
+import LoginWrap from './Login.module.scss'
 
 
 const LogIn = props => {
 
-    const {isValid, setIsValid} = useState(true);
+    const {isValid, setIsValid} = useState(false);
     // const isValid = false
-    const logInHandaler = (value) => {
-        setIsValid (value) 
-        console.log("hi value of isValid=" + isValid)
+    const checkOnLoggedIn = (value) => {
+        if (value === true ) {
+            setIsValid(true)
+        } else {
+            setIsValid (false)
+        }
     }
-    const logOutHandaler = () => {
-        setIsValid (false) 
-        console.log("hi value of isValid=" + isValid)
+    // const logInHandaler = (value) => {
+    //     setIsValid (value) 
+    //     console.log("hi value of isValid=" + isValid)
+    // }
+    // const logOutHandaler = () => {
+    //     setIsValid (false) 
+    //     console.log("hi value of isValid=" + isValid)
+    // }
+
+    const handleLogout = (value) => {
+        if (value === true) {
+            setIsValid(true)
+        }
     }
 
     
@@ -25,14 +39,14 @@ const LogIn = props => {
             <div>
                 Data is valid
 
-                <Dashboard onLogin = {logInHandaler} onLogOut = {logOutHandaler}></Dashboard>
+                <Dashboard onLoggedOut = {handleLogout}></Dashboard>
             </div>
         );
     } else {
 
         return (
     
-            <div>
+            <div className={LoginWrap.loginWrapper}>
                
                 <img 
                 src= {avatarIcon} 
@@ -40,7 +54,7 @@ const LogIn = props => {
                 style={{height:"100px", width:"100px"}}/>
     
                 
-                <LogInForm ></LogInForm>
+                <LogInForm onLoggedIn={checkOnLoggedIn}></LogInForm>
             </div>
         );
     

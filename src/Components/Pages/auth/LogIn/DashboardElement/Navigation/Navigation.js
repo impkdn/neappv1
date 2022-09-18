@@ -1,6 +1,8 @@
 import React from "react";
 import UserImage from "../../../../../../avatar/Avatar9.png"
 import classes from "./Navigation.module.scss"
+import { NavLink } from "react-router-dom";
+import Button from "../../Button/Button";
 
 
 const Navigation = () => {
@@ -36,9 +38,11 @@ const Navigation = () => {
                 </a>
               </li>
               <li className={classes["nav-item"]}>
-                <a className={classes["nav-link"]} href="./dashboard.html">
+              <NavLink to='/dashboard'><Button text="Dashboard" type = "button"></Button></NavLink>
+                
+                {/* <a className={classes["nav-link"]} href="./dashboard.html">
                   Dashboard
-                </a>
+                </a> */}
               </li>
             </ul>
           </nav>

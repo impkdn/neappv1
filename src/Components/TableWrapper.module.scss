@@ -1,0 +1,20 @@
+.tableWrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 88px);
+    overflow: scroll;
+}
+.loader{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #7e7e7e;
+    width: 100%;
+    position: relative;
+}

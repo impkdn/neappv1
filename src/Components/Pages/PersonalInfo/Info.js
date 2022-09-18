@@ -37,22 +37,22 @@ const Info = (props) => {
         <br />
         <p className={infoCls["user-profile"]}>
           <span class="user-profile-details"> AGE: </span>
-          <span class="u-age"></span>
+          <span class="u-age">{props.uAge}</span>
         </p>
         <br />
         <p className={infoCls["user-profile"]}>
           <span class="user-profile-details float-left"> ADDRESS: </span>
-          <span class="u-address"></span>
+          <span class="u-address">{props.uAdd}</span>
         </p>
         <br />
         <p className={infoCls["user-profile"]}>
           <span class="user-profile-details float-left"> LOGIN ID: </span>
-          <span class="u-login u-address"></span>
+          <span class="u-login u-address"> {props.uLogIn}</span>
         </p>
         <br />
         <p className={infoCls["user-profile"]}>
           <span class="user-profile-details"> Registration Date:</span>
-          <span class="u-address u-registration"></span>
+          <span class="u-address u-registration">{props.userRegt}</span>
         </p>
         <br />
         {/* <p>ADDRESS: <span class="u-address"></span></p>  */}

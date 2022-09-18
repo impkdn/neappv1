@@ -2,7 +2,8 @@
     float: left;
     width: 250px;
     border-right: 1px solid #ebebeb;
-    height: 100%;
+    height: calc(100% - 88px);
+    
     .user-info {
         height: 110px;
         border-bottom: 1px solid #e7e2e2;
@@ -19,9 +20,10 @@
       }
       .nvabar-wrapper {
         height: calc(100% - 110px);
-
+        
         nav {
             height: 100%;
+            overflow: scroll;
 
             ul {
                 display: flex;
@@ -45,4 +47,15 @@
           }
       }
 
+  }
+  .nav-item{
+    button{
+        border: none;
+        color: #869abf;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 30px;
+    text-decoration: none;
+    background: transparent;
+    }
   }

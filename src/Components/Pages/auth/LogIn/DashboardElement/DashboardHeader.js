@@ -1,6 +1,6 @@
 // import { style } from "@mui/system";
 import React from "react";
-import classes from "./Dashboard.module.scss"
+import classes from "./DashboardHeader.module.scss"
 import { useState } from "react";
 import userImage from "../../../../../avatar/Avatar9.png"
 import menuIcon from "../../../../../avatar/2292434-200.png"
@@ -21,6 +21,11 @@ const DashboardHeader = (props) => {
       setDisplay(true)
       // console.log(display);
     }
+    const onClickHandeler = () => {
+      sessionStorage.clear();
+      props.onLogout(true)
+
+  }
 
     
     return (
@@ -60,11 +65,12 @@ const DashboardHeader = (props) => {
                 </span>
               </button>
               <div  className={`${classes.dropDownContentShow} ${!display  && classes.dropDownContentHide}`}>
-                <a href="./profile.html" >Personal Info</a>
+                {/* <a href="./profile.html" >Personal Info</a> */}
                 <NavLink to = "/personalinfo"><Button text="Personal Info"></Button></NavLink>
                 <a href="#">Settings</a>
                 <a href="#">Profile</a>
-                <a href="./index.html">Logout</a>
+                <NavLink to="/"><Button type = "button" text = "Logout" onClick={onClickHandeler}></Button></NavLink>
+                {/* <a href="./index.html">Logout</a> */}
               </div>
             </div>
           </div>

@@ -52,16 +52,17 @@ const LogInForm = (props) => {
     if (isValid) {
       alert("Form data is valid");
       navigate(`/dashboard`)
+      props.onLoggedIn(isValid)
 
 
       // <Navigate replace to="../../Components/LogIn/Dashboard" />
-      props.onLogin(isValid);
+      // props.onLogin(isValid);
       // <Redirect to='../Dashboard'></Redirect>
       // navigate("/dashboard", { replace: true });
       
     } 
     // console.log(localStorage.getItem("authenticated"));
-    props.onLogin(isValid);
+    props.onLoggedIn(isValid);
     setEmail("");
     setPassword("");
   };

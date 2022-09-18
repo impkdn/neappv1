@@ -4,7 +4,7 @@ import classes from "./Table.module.scss"
 const TableContent = (props) => {
 
     return (
-        <table className={classes.itemTable}>
+        
             <tr className={classes.rowContent}>
                 <td className="objectItem">{props.API}</td>
                 <td className="objectItem">{props.Auth}</td>
@@ -15,7 +15,7 @@ const TableContent = (props) => {
                 <td className="objectItem">{props.Link}</td>
             </tr>
 
-        </table>
+        
     );
 }
 

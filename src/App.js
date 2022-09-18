@@ -18,9 +18,9 @@ function App() {
       <BrowserRouter> 
         <Routes>
           <Route path="/" exact element={<Layout/>}>
-            <Route index element={<Home/>}/>
-            <Route path='contact' element={<Contact/>}/>
-            <Route path='login' element={<LogIn/>}>
+            <Route index element={<LogIn/>}>
+            {/* <Route index element={<Home/>}/> */}
+            {/* <Route path='contact' element={<Contact/>}/> */}
           </Route>
           <Route path='/'cxact element={<DashboardLayout/>}>
             <Route path='dashboard' element = {<Dashboard/>}/>
